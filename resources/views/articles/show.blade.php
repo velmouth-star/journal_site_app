@@ -14,6 +14,14 @@
     タイトル: {{ $article->title }}
     <p>{{ $article->body }}</p>
     <button onclick="location.href='/articles'">一覧へ戻る</button>
+    <button onclick="location.href='/articles/{{ $article->id }}/edit'">編集する</button>
+    <form action="/articles/{{ $article->id }}" method="post">
+        @csrf
+        @method('DELETE')
+        <input type="submit" value="削除する" onclick="if(!confirm('削除しますか？')){return false};">
+    </form>
+
+
 </body>
 
 </html>
