@@ -18,6 +18,8 @@
             </a>
         </p>
     @endforeach
+
+    <button onclick="location.href='/articles/create'">新規投稿論文</button>
 </body>
 
 </html>
